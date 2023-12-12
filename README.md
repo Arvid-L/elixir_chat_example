@@ -259,8 +259,9 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
     ```
     
     - Set confg in  `dev.exs`
-        - for local access `http: [ip: {127, 0, 0, 1}, port: 4000],`
-        - for web access `http: [ip: {0, 0, 0, 0}, port: 4000],`
+        - make it accessible through localhost `http: [ip: {127, 0, 0, 1}, port: 4000],`
+        - make it accessible from remote web `http: [ip: {0, 0, 0, 0}, port: 4000],`
+          - You also need to make port 4000 accessible for on your router
     - Setup DB
         - `mix phx.gen.context Chats Message messages name:string body:text`
         - `mix ecto.migrate`
